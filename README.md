@@ -4,8 +4,6 @@ A comparative study of 8 fraud-detection methods on a highly imbalanced credit-c
 (~0.17% positives), with a focus on what unsupervised and deep-learning approaches can really
 deliver against a strong supervised baseline.
 
-> *Master 2 IASD — Université Paris-Dauphine. Application portfolio project.*
-
 ---
 
 ## Why I built this
