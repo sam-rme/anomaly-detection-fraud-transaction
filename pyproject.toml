@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anomaly-detection-fraud"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "xgboost",
+    "torch",
+    "optuna",
+    "mlflow",
+    "matplotlib",
+    "seaborn",
+    "pyyaml",
+    "kaggle",
+    "pymongo",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "black", "pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

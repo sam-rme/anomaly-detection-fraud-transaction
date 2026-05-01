@@ -1,0 +1,25 @@
+paths:
+  data_raw: data/raw/creditcard.csv
+  data_processed: data/processed/
+  outputs: outputs/
+  mlruns: mlruns/
+
+
+seeds: [0, 1, 2, 3, 4]
+
+split:
+  train: 0.80
+  val: 0.10
+  test: 0.10
+
+experiment2:
+  fraud_fractions: [0.0, 0.10, 0.25, 0.50, 1.0]
+
+mlflow:
+  experiment_name: fraud-detection
+  # SQLite backend — run `mlflow ui --backend-store-uri sqlite:///mlruns/mlflow.db` to browse
+  tracking_uri: sqlite:///mlruns/mlflow.db
+  # MongoDB run history (optional — set to null to disable)
+  mongodb_uri: null  # mettre l'URI ici quand MongoDB est disponible
+  mongodb_db: fraud_detection
+

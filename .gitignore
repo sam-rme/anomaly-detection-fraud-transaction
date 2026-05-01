@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+.python-version
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data — raw dataset is gitignored, downloaded via scripts/download_data.py
+data/raw/
+data/processed/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# Experiment tracking
+mlruns/
+mlflow.db
+*.db
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Allow CSV/PNG outputs to be committed (small, useful for the report)
+!outputs/*.csv
+!outputs/figures/*.png
